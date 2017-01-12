@@ -27,21 +27,18 @@ namespace Project
          */
         public static int GetPositionAt(int n)
         {
-            if (n == 0) return 0;
-            if (n == 1) return 1;
-            if (n == 2) return -1;
-
-            int pos = -1;
-            var prev = -2;
-            var penu = 1;
-            for (var i = 3; i < n ; i++)
+            var step = n % 6;
+            switch (step)
             {
-                var delta = prev - penu;
-                penu = prev;
-                prev = delta;
-                pos += delta;
+                case 0: return 0;
+                case 1: return 1;
+                case 2: return -1;
+                case 3: return -4;
+                case 4: return -5;
+                case 5: return -3;
             }
-            return pos + prev - penu;
+            // Should never happen
+            return 999999;
         }
 
         static void Main(string[] args)
