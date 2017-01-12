@@ -14,13 +14,6 @@ namespace Project
         }
 
         [TestMethod]
-        public void ProblemSolving4()
-        {
-            var pos = Solution.GetPositionAt(4);
-            Check.That(pos).Equals(-5);
-        }
-
-        [TestMethod]
         public void ProblemSolving2()
         {
             var pos = Solution.GetPositionAt(100000);
@@ -32,6 +25,13 @@ namespace Project
         {
             var pos = Solution.GetPositionAt(2147483647);
             Check.That(pos).Equals(1);
+        }
+
+        [TestMethod]
+        public void ProblemSolving4()
+        {
+            var pos = Solution.GetPositionAt(4);
+            Check.That(pos).Equals(-5);
         }
 
         [TestMethod]

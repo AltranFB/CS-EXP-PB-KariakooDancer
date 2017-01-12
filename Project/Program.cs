@@ -27,21 +27,7 @@ namespace Project
          */
         public static int GetPositionAt(int n)
         {
-            if (n == 0) return 0;
-            if (n == 1) return 1;
-            if (n == 2) return -1;
-
-            int pos = -1;
-            var prev = -2;
-            var penu = 1;
-            for (var i = 3; i < n ; i++)
-            {
-                var delta = prev - penu;
-                penu = prev;
-                prev = delta;
-                pos += delta;
-            }
-            return pos + prev - penu;
+            // WRITE YOUR CODE HERE
         }
 
         static void Main(string[] args)
